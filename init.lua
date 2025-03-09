@@ -717,6 +717,12 @@ require('lazy').setup({
               },
             },
           },
+
+          beancount = {
+            init_options = {
+              journal_file = '~/Documents/paisa/ledger/main.beancount',
+            },
+          },
         },
 
         -- This table contains config for all language servers that are *not* installed via Mason.
