@@ -591,6 +591,12 @@ require('lazy').setup({
             },
           },
         },
+
+        beancount = {
+          init_options = {
+            journal_file = '~/Documents/paisa/ledger/main.beancount',
+          },
+        },
       }
 
       -- Ensure the servers and tools above are installed
