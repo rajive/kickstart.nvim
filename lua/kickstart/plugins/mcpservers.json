@@ -1,0 +1,84 @@
+{
+  "nativeMCPServers": {
+    "mcphub": {
+      "disabled": false
+    },
+    "neovim": {
+      "autoApprove": [
+        "execute_lua",
+        "execute_command",
+        "read_file",
+        "delete_item",
+        "move_item",
+        "find_files",
+        "list_directory",
+        "write_file",
+        "replace_in_file"
+      ],
+      "disabled_prompts": [
+        "parrot"
+      ],
+       "disabled": false
+    }
+  },
+  "mcpServers": {
+    "memory": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "@modelcontextprotocol/server-memory"
+      ],
+      "env": {
+        "MEMORY_FILE_PATH": "${HOME}/Documents/mcp/memory.json"
+      }
+    },
+    "sequential-thinking": {
+      "args": [
+        "-y",
+        "@modelcontextprotocol/server-sequential-thinking@latest"
+      ],
+      "command": "npx",
+      "disabled": false,
+      "autostart": true
+    },
+    "time": {
+      "command": "uvx",
+      "args": ["mcp-server-time"]
+    },
+    "neovim-editor": {
+      "args": [
+        "-y",
+        "mcp-neovim-server"
+      ],
+      "disabled": false,
+      "command": "npx",
+      "env": {
+        "NVIM_SOCKET_PATH": "/tmp/nvim",
+        "ALLOW_SHELL_COMMANDS": "false"
+      },
+      "autostart": true
+    },
+    "filesystem": {
+      "args": [
+        "-y",
+        "@modelcontextprotocol/server-filesystem",
+        "."
+      ],
+      "command": "npx",
+      "disabled": false,
+      "autostart": true
+    },
+    "fetch": {
+      "args": [
+        "mcp-server-fetch"
+      ],
+      "command": "uvx",
+      "disabled": false,
+      "autostart": true
+    },
+    "git": {
+      "command": "uvx",
+      "args": ["mcp-server-git", "--repository", "."]
+    }
+  }
+}

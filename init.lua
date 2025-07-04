@@ -1021,6 +1021,7 @@ require('lazy').setup({
   require 'kickstart.plugins.oil',
   require 'kickstart.plugins.markdown', -- improve rendering of markdown text
   require 'kickstart.plugins.img-clip', -- embed images into any markup language
+  require 'kickstart.plugins.mcp', -- AI: Model Context Protocol (MCP) Servers
 
   -- NOTE: The import below can automatically add your own plugins, configuration, etc from `lua/custom/plugins/*.lua`
   --    This is the easiest way to modularize your config.
